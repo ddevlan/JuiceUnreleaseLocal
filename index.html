@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/150402b029.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="account">
+        <a href="http://127.0.0.1:5500/php/user/login.php">
+            <button id="login">
+                Sign in
+            </button>
+        </a>
+        
+        <a href="http://127.0.0.1:5500/php/user/register.php">
+            <button id="register">
+                Register
+            </button>
+        </a>
+    </div>
+
+    <h1 class="header">Music Player</h1>
+    <div class="music-container">
+        <div class="music-info">
+            <h4 id="title">Song Title</h4>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <audio src="" id="audio"></audio>
+
+        <div class="img-container">
+            <img src="" alt="music-cover" id="cover"/>
+        </div>
+
+        <div class="volume">
+            <button id="volume" class="action-btn">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <input id="vol-control" type="range" min="0" max="100" step="1"></input>
+        </div>
+
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn-big">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+            <button id="shuffle" class="action-btn">
+                <i class="fas fa-shuffle"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="search-bar">
+        <input type="text" id="search-box" placeholder="Search for a song...">
+    </div>
+
+    <div id="results">
+        
+    </div>
+
+    <script src="js/script.js"></script>
+</html>
